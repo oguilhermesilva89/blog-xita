@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
  
-  resources :vehicles, only: %i[index new create show]
+  resources :vehicles#, only: %i[ index new create show edit update ]
 
   # resources :vehicles, only: [:index, :new, :create, :show, :edit, :update, :destroy]
 
