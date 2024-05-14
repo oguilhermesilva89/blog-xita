@@ -4,18 +4,4 @@
   <%= link_to 'New Vehicle', new_vehicle_path %>
 </p>
 
-<% @vehicles.each do |vehicle| %>
-
-  
-
-  <p>
-  <%= vehicle.id %> |
-  <%= vehicle.brand %> |
-  <%= vehicle.model %> |
-  <%= vehicle.year %> |
-  <%= vehicle.kind %> |
-  <%= link_to 'Details', vehicle_path(vehicle) %> |
-  <%= link_to 'Edit', edit_vehicle_path(vehicle) %> |
-  <%= link_to 'Erase', vehicle_path(vehicle), data: { 'turbo-method': :delete, 'turbo-confirm': 'Confirmar ação de apagar' } %> 
-  </p>
-<% end %>
+<%= render @vehicles %>
